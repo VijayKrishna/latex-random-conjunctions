@@ -54,6 +54,29 @@
 	\moreoverPhrases(\arabic{phraseIndex})
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newarray\ForExamplePhrases
+\ForExamplePhrases(1)={For example,}
+\ForExamplePhrases(2)={E.g.,}
+\ForExamplePhrases(3)={For instance,}
+\ForExamplePhrases(4)={Take for instance,}
+\ForExamplePhrases(5)={Consider for instance,}
+\ForExamplePhrases(6)={Take for example,}
+\ForExamplePhrases(7)={Consider for example,}
+\ForExamplePhrases(8)={Case in point,}
+
+\def\numEgPhrases{8}
+
+\def\Forexample{%
+	\chgrand[last=\numEgPhrases]
+	\rand
+	\ForExamplePhrases(\arabic{phraseIndex})
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% array for Therefore borrowed from https://github.com/bgschiller/latex-therefore
+
 \newarray\ThereforePhrases
 \ThereforePhrases(1)={Therefore,}
 \ThereforePhrases(2)={Hence,}
@@ -86,12 +109,8 @@
 
 \def\numphrases{12}
 
-\def\change{
-	\chgrand[last=\numphrases]	
-}
-
 \def\Therefore{%
-	\change
+	\chgrand[last=\numphrases]
 	\rand
 	\ThereforePhrases(\arabic{phraseIndex})
 }

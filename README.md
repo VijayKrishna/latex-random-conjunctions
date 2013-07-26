@@ -9,7 +9,7 @@ This project was largely inspired by [bgshiller's latex package: latex-therefore
 Supported Words/Phrases
 - Therefore
 - Moreover
+- For example
 
 To-be Supported Words/Phrases:
-- For example
 - However
