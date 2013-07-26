@@ -42,16 +42,16 @@
 %\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{lcg}}
 %\ProcessOptions\relax
 
-\RequirePackage[first=1, last=\numMphrases, counter=phraseIndex] {lcg}
+\RequirePackage[first=1, last=\numMphrases] {lcg}
 
 \def\Moreover{%
 	\rand
-	\MoreoverPhrases(\arabic{phraseIndex})
+	\MoreoverPhrases(\arabic{rand})
 }
 
 \def\moreover{%
 	\rand
-	\moreoverPhrases(\arabic{phraseIndex})
+	\moreoverPhrases(\arabic{rand})
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,12 +66,29 @@
 \ForExamplePhrases(7)={Consider for example,}
 \ForExamplePhrases(8)={Case in point,}
 
+
+\newarray\smallForExamplePhrases
+\smallForExamplePhrases(1)={for example,}
+\smallForExamplePhrases(2)={e.g.,}
+\smallForExamplePhrases(3)={for instance,}
+\smallForExamplePhrases(4)={take for instance,}
+\smallForExamplePhrases(5)={consider for instance,}
+\smallForExamplePhrases(6)={take for example,}
+\smallForExamplePhrases(7)={consider for example,}
+\smallForExamplePhrases(8)={case in point,}
+
 \def\numEgPhrases{8}
 
 \def\Forexample{%
 	\chgrand[last=\numEgPhrases]
 	\rand
-	\ForExamplePhrases(\arabic{phraseIndex})
+	\ForExamplePhrases(\arabic{rand})
+}
+
+\def\smallForexample{%
+	\chgrand[last=\numEgPhrases]
+	\rand
+	\smallForExamplePhrases(\arabic{rand})
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,5 +129,5 @@
 \def\Therefore{%
 	\chgrand[last=\numphrases]
 	\rand
-	\ThereforePhrases(\arabic{phraseIndex})
+	\ThereforePhrases(\arabic{rand})
 }
