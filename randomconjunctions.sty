@@ -1,0 +1,97 @@
+%therefore package
+%provides a macro to randomly choose a phrase equivalent to 'therefore'
+%inspired by the post at http://www.reddit.com/r/math/comments/1gov71/mathematical_writing_synonyms_for_therefore/
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{randomconjunctions}[2013/07/25 RandomConjunctions Package written by Vijay Krishna Palepu]
+
+\RequirePackage{arrayjobx}
+\newarray\MoreoverPhrases
+\MoreoverPhrases(1)={Moreover,}
+\MoreoverPhrases(2)={Further,}
+\MoreoverPhrases(3)={Furthermore,}
+\MoreoverPhrases(4)={Also,}
+\MoreoverPhrases(5)={Additionally,}
+\MoreoverPhrases(6)={In addition,}
+\MoreoverPhrases(7)={What is more,}
+\MoreoverPhrases(8)={It also happens that}
+\MoreoverPhrases(9)={Besides,}
+\MoreoverPhrases(10)={Plus,}
+\MoreoverPhrases(11)={Conjointly,}
+\MoreoverPhrases(12)={As well as,}
+
+\newarray\moreoverPhrases
+\moreoverPhrases(1)={moreover,}
+\moreoverPhrases(2)={further,}
+\moreoverPhrases(3)={furthermore,}
+\moreoverPhrases(4)={also,}
+\moreoverPhrases(5)={additionally,}
+\moreoverPhrases(6)={in addition,}
+\moreoverPhrases(7)={what is more,}
+\moreoverPhrases(8)={it also happens that}
+\moreoverPhrases(9)={besides,}
+\moreoverPhrases(10)={plus,}
+\moreoverPhrases(11)={conjointly,}
+\MoreoverPhrases(12)={As well as,}
+
+
+\def\numMphrases{12}
+
+%allow user to set seed
+%\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{lcg}}
+%\ProcessOptions\relax
+
+\RequirePackage[first=1, last=\numMphrases, counter=phraseIndex] {lcg}
+
+\def\Moreover{%
+	\rand
+	\MoreoverPhrases(\arabic{phraseIndex})
+}
+
+\def\moreover{%
+	\rand
+	\moreoverPhrases(\arabic{phraseIndex})
+}
+
+\newarray\ThereforePhrases
+\ThereforePhrases(1)={Therefore,}
+\ThereforePhrases(2)={Hence,}
+\ThereforePhrases(3)={So,}
+\ThereforePhrases(4)={It is trivial that}
+\ThereforePhrases(5)={Clearly,}
+\ThereforePhrases(6)={Behold!}
+\ThereforePhrases(7)={Ergo,}
+\ThereforePhrases(8)={And verily it goes that}
+\ThereforePhrases(9)={Thus,}
+\ThereforePhrases(10)={By logical extension,}
+\ThereforePhrases(11)={And verily,}
+\ThereforePhrases(12)={It is the will of the Gods that}
+\ThereforePhrases(13)={We find}
+\ThereforePhrases(14)={It can be shown that}
+\ThereforePhrases(15)={It transpires that}
+\ThereforePhrases(16)={As an exercise, prove that}
+\ThereforePhrases(17)={Wherefore said He unto them,}
+\ThereforePhrases(18)={As must be obvious to even the meanest intellect,}
+\ThereforePhrases(19)={The power of logic reveals the conclusion that}
+\ThereforePhrases(20)={This implies}
+\ThereforePhrases(21)={As Gauss proved,}
+\ThereforePhrases(22)={As Euler proved,}
+\ThereforePhrases(23)={And it was handed down from the heavens that}
+\ThereforePhrases(24)={It pleases the symmetry of the world that}
+\ThereforePhrases(25)={Consequently,}
+\ThereforePhrases(26)={Accordingly,}
+\ThereforePhrases(27)={For this reason,}
+\ThereforePhrases(28)={If there is any justice in the world,}
+
+\def\numphrases{12}
+
+\def\change{
+	\chgrand[last=\numphrases]	
+}
+
+\def\Therefore{%
+	\change
+	\rand
+	\ThereforePhrases(\arabic{phraseIndex})
+}
