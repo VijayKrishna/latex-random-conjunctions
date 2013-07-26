@@ -7,9 +7,9 @@ You can now focus on the stuff that really matters and leave the burden of figur
 This project was largely inspired by [bgshiller's latex package: latex-therefore](https://github.com/bgschiller/latex-therefore). In many ways this project is a generalization of that idea.
 
 Supported Words/Phrases
-- [x] Therefore
-- [x] Moreover
+- Therefore
+- Moreover
 
 To-be Supported Words/Phrases:
-- [ ] For example
-- [ ] However
+- For example
+- However
