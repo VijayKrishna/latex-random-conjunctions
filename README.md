@@ -10,6 +10,7 @@ Supported Words/Phrases
 - Therefore
 - Moreover
 - For example
+- However
 
 To-be Supported Words/Phrases:
-- However
+- TBD

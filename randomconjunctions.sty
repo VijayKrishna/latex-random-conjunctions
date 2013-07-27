@@ -21,19 +21,19 @@
 \MoreoverPhrases(11)={Conjointly,}
 \MoreoverPhrases(12)={As well as,}
 
-\newarray\moreoverPhrases
-\moreoverPhrases(1)={moreover,}
-\moreoverPhrases(2)={further,}
-\moreoverPhrases(3)={furthermore,}
-\moreoverPhrases(4)={also,}
-\moreoverPhrases(5)={additionally,}
-\moreoverPhrases(6)={in addition,}
-\moreoverPhrases(7)={what is more,}
-\moreoverPhrases(8)={it also happens that}
-\moreoverPhrases(9)={besides,}
-\moreoverPhrases(10)={plus,}
-\moreoverPhrases(11)={conjointly,}
-\MoreoverPhrases(12)={As well as,}
+\newarray\smallMoreoverPhrases
+\smallMoreoverPhrases(1)={moreover,}
+\smallMoreoverPhrases(2)={further,}
+\smallMoreoverPhrases(3)={furthermore,}
+\smallMoreoverPhrases(4)={also,}
+\smallMoreoverPhrases(5)={additionally,}
+\smallMoreoverPhrases(6)={in addition,}
+\smallMoreoverPhrases(7)={what is more,}
+\smallMoreoverPhrases(8)={it also happens that}
+\smallMoreoverPhrases(9)={besides,}
+\smallMoreoverPhrases(10)={plus,}
+\smallMoreoverPhrases(11)={conjointly,}
+\smallMoreoverPhrases(12)={as well as,}
 
 
 \def\numMphrases{12}
@@ -49,9 +49,9 @@
 	\MoreoverPhrases(\arabic{rand})
 }
 
-\def\moreover{%
+\def\smallMoreover{%
 	\rand
-	\moreoverPhrases(\arabic{rand})
+	\smallMoreoverPhrases(\arabic{rand})
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,6 +65,7 @@
 \ForExamplePhrases(6)={Take for example,}
 \ForExamplePhrases(7)={Consider for example,}
 \ForExamplePhrases(8)={Case in point,}
+\ForExamplePhrases(9)={As an illustration,}
 
 
 \newarray\smallForExamplePhrases
@@ -76,8 +77,9 @@
 \smallForExamplePhrases(6)={take for example,}
 \smallForExamplePhrases(7)={consider for example,}
 \smallForExamplePhrases(8)={case in point,}
+\smallForExamplePhrases(9)={as an illustration,}
 
-\def\numEgPhrases{8}
+\def\numEgPhrases{9}
 
 \def\Forexample{%
 	\chgrand[last=\numEgPhrases]
@@ -89,6 +91,25 @@
 	\chgrand[last=\numEgPhrases]
 	\rand
 	\smallForExamplePhrases(\arabic{rand})
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newarray\HoweverPhrases
+\HoweverPhrases(1)={However,}
+\HoweverPhrases(2)={Nevertheless,}
+\HoweverPhrases(3)={In spite of that,}
+\HoweverPhrases(4)={On the other hand,}
+\HoweverPhrases(5)={Nonetheless,}
+\HoweverPhrases(6)={Notwithstanding,}
+\HoweverPhrases(7)={Although,}
+
+\def\numHoweverPhrases{7}
+
+\def\However{%
+	\chgrand[last=\numHoweverPhrases]
+	\rand
+	\HoweverPhrases(\arabic{rand})
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
